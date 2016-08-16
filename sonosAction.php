@@ -1,14 +1,12 @@
 
 <?php
   include 'sonosConstants.php';
-
   function str_insert($str, $search, $insert){
     $index = strpos($str, $search);
     if($index === false){
         return $str;
     }
     return substr_replace($str, $search.$insert, $index, strlen($search));
-
   }
 
   $validCommand = true;
@@ -41,7 +39,7 @@
           $body = $BODY_VOLUME;
           $headers = $HEADERS_VOLUME;
           $args = json_decode($_GET['args']);
-          str_insert($body, '<DesiredVolume>', $args[0]);
+          $body = str_insert($body, '<DesiredVolume>', $args[0]);
           $index = array_search("CONTENT-LENGTH: ", $headers);
           $headers[$index] = $headers[$index].strlen($body);
           break;

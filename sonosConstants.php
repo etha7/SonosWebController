@@ -77,13 +77,13 @@ $HEADERS_NEXT = array('CONNECTION: close', 'ACCEPT-ENCODING: gzip', 'HOST: 192.1
 
 
 /* SET VOLUME */
-$URL_RENDER = "http://192.168.1.143:1400/MediaRenderer/RenderingControl/Control"  
+$URL_RENDER = "http://192.168.1.143:1400/MediaRenderer/RenderingControl/Control";
 $BODY_VOLUME = '<s:Envelope
     xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
     s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
     <s:Body>
         <u:SetVolume
-            xmlns:u="urn:schemas-upnp-org:service:AVTransport:1">
+            xmlns:u="urn:schemas-upnp-org:service:RenderingControl:1">
             <InstanceID>0</InstanceID>
             <Channel>Master</Channel>
             <DesiredVolume></DesiredVolume>
