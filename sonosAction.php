@@ -43,6 +43,15 @@
           $index = array_search("CONTENT-LENGTH: ", $headers);
           $headers[$index] = $headers[$index].strlen($body);
           break;
+        case 'discover':
+
+          $sock = socket_create(AF_INET, SOCK_DGRAM, getprotobyname('udp'));
+          $buffer = "test buffer";
+          socket_sendto($sock, $buffer, strlen($buffer), 0, );
+
+
+
+          break;
         default:
           $validCommand = false;
           echo("<script>alert('Sonos command \"$cmd\" not supported!')</script>");

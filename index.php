@@ -8,7 +8,7 @@
     var currentVolume=20;
   </script>
   <div id="title"><div>Sonos Controller</div></div>
-  <iframe id="sonosAction" style="" src=""></iframe>
+  <iframe id="sonosAction" style="display:none" src=""></iframe>
   <div id="buttonContainer">
     <div class="commandButton" onclick="sendCommand('play')">Play</div>
     <div class="commandButton" onclick="sendCommand('pause')">Pause</div>
