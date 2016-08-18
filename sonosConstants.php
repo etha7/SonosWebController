@@ -1,7 +1,7 @@
 <?php
 
 /* PLAY */
-$URL_AV = 'http://192.168.1.143:1400/MediaRenderer/AVTransport/Control';
+$URL_AV = '/MediaRenderer/AVTransport/Control';
 $BODY_PLAY = '<s:Envelope
     xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
     s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
@@ -77,7 +77,7 @@ $HEADERS_NEXT = array('CONNECTION: close', 'ACCEPT-ENCODING: gzip', 'HOST: 192.1
 
 
 /* SET VOLUME */
-$URL_RENDER = "http://192.168.1.143:1400/MediaRenderer/RenderingControl/Control";
+$URL_RENDER = "/MediaRenderer/RenderingControl/Control";
 $BODY_VOLUME = '<s:Envelope
     xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
     s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
